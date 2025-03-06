@@ -42,7 +42,7 @@ function setpaths()
     PATH=${arm_histbv320_path}:${PATH//${arm_histbv320_path}:/}
     PATH=${aarch64_histbv100_path}:${PATH//${aarch64_histbv100_path}:/}
     PATH=${utils_path}:${PATH//${utils_path}:/}
-    echo $PATH
+    export PATH=$PATH
 }
 
 function check_bash()
