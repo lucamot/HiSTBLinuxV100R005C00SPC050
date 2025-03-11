@@ -212,6 +212,7 @@
 				clock-names = "apb_pclk";
 				#address-cells = <1>;
 				#size-cells = <0>;
+				status = "disabled";
 			};
 
 			hii2c1:i2c@0xf8b11000 {
@@ -223,6 +224,7 @@
 				clock-names = "apb_pclk";
 				#address-cells = <1>;
 				#size-cells = <0>;
+				status = "disabled";
 			};
 
 			hii2c2:i2c@0xf8b12000 {
@@ -234,6 +236,7 @@
 				clock-names = "apb_pclk";
 				#address-cells = <1>;
 				#size-cells = <0>;
+				status = "disabled";
 			};
 
 			spi:spi@0xF8B1A000 {
@@ -247,6 +250,7 @@
 				clocks = <&hisilicon_clock PERI_CRG28_SSP>;
 				clock-names = "apb_pclk";
 				pl022,rt;
+				status = "disabled";
 
 				/* userspace spi interface
 				 * parse by of_register_spi_devices function
@@ -309,6 +313,7 @@
 				interrupts = <0 50 4>;
 				clocks = <&clk_3m>;
 				clock-names = "apb_pclk";
+				status = "disabled";
 			};
 
 			uart2: uart@0xf8b02000 {
@@ -345,6 +350,7 @@
 
 			caps = <0x80000047>;
 			max-frequency = <100000000>;
+			status = "disabled";
 		};
 
 		hinfc610.NAND@0xf9810000 {
@@ -353,6 +359,7 @@
 
 			clocks = <&hisilicon_clock PERI_CRG24_NANDC>;
 			clock-names = "clk";
+			status = "disabled";
 		};
 
 		hisilicon_clock: hisilicon_clock {
@@ -370,6 +377,7 @@
 			phy-handle = <&hieth_phy0>;
 			#address-cells = <1>;
 			#size-cells = <0>;
+			status = "disabled";
 
 			hieth_phy0: hieth_phy@0 {
 				reg = <2>;
@@ -415,6 +423,7 @@
 
 			clocks = <&hisilicon_clock PERI_CRG102_USB2CTRL2>;
 			clock-names = "clk";
+			status = "disabled";
 		};
 
 		xhci@0xf98a0000 {
