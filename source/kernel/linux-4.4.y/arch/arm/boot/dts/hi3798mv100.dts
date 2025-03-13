@@ -313,7 +313,6 @@
 				interrupts = <0 50 4>;
 				clocks = <&clk_3m>;
 				clock-names = "apb_pclk";
-				status = "disabled";
 			};
 
 			uart2: uart@0xf8b02000 {
