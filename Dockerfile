@@ -18,6 +18,7 @@ RUN apt-get update && apt-get install -y \
     zlib1g-dev \
     libncurses5-dev \
     gettext \
+    python3 \
     && rm -rf /var/lib/apt/lists/*
 
 # Set working directory

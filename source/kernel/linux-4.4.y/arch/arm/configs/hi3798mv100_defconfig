@@ -483,7 +483,7 @@ CONFIG_ARM_APPENDED_DTB=y
 CONFIG_ARM_ATAG_DTB_COMPAT=y
 # CONFIG_ARM_ATAG_DTB_COMPAT_CMDLINE_FROM_BOOTLOADER is not set
 CONFIG_ARM_ATAG_DTB_COMPAT_CMDLINE_EXTEND=y
-CONFIG_CMDLINE="mem=256M mmz=ddr,0,0,160M console=ttyAMA0,115200 root=/dev/mmcblk0p4 rootfstype=ext4 rootwait rw blkdevparts=mmcblk0:1M(boot),1M(bootargs),8M(kernel),128M(rootfs),-(free)"
+CONFIG_CMDLINE="mem=256M mmz=ddr,0,0,32M console=ttyAMA0,115200 root=/dev/mmcblk0p4 rootfstype=ext4 rootwait rw blkdevparts=mmcblk0:1M(boot),1M(bootargs),8M(kernel),128M(rootfs),-(free)"
 #CONFIG_CMDLINE="mem=256M mmz=ddr,0,0,160M console=ttyAMA0,115200 root=/dev/mmcblk0p4 rootfstype=ext4 rootwait rw blkdevparts=mmcblk0:1M(boot),1M(bootargs),8M(kernel),128M(rootfs),-(free) usbcore.dyndbg=+p xhci_hcd.dyndbg=+p ehci_hcd.dyndbg=+p"
 CONFIG_CMDLINE_FROM_BOOTLOADER=y
 # CONFIG_CMDLINE_EXTEND is not set
@@ -921,8 +921,8 @@ CONFIG_DSP_RUN_MEM_SIZE=0x800000
 # CONFIG_SUPPORT_CA is not set
 # CONFIG_CA_FILE_AUTHORITY is not set
 # CONFIG_CA_NET_CONFIG is not set
-# CONFIG_CMA_MEM_SHARED is not set
-# CONFIG_CMA_ADVANCE_SHARE is not set
+CONFIG_CMA_MEM_SHARED=y
+CONFIG_CMA_ADVANCE_SHARE=y
 #CONFIG_USB_OTG_HISI=y
 # CONFIG_TEE is not set
 # CONFIG_REGULATOR is not set
@@ -2186,7 +2186,10 @@ CONFIG_SND_ARM=y
 # CONFIG_SND_ARMAACI is not set
 CONFIG_SND_SPI=y
 CONFIG_SND_USB=y
-CONFIG_SND_USB_AUDIO=y
+CONFIG_SND_HDA=y
+CONFIG_SND_HDA_INTEL=y
+CONFIG_SND_HDA_CODEC_HDMI=y
+#CONFIG_SND_USB_AUDIO=y
 # CONFIG_SND_USB_UA101 is not set
 # CONFIG_SND_USB_CAIAQ is not set
 # CONFIG_SND_USB_6FIRE is not set
@@ -2196,7 +2199,13 @@ CONFIG_SND_USB_AUDIO=y
 # CONFIG_SND_USB_PODHD is not set
 # CONFIG_SND_USB_TONEPORT is not set
 # CONFIG_SND_USB_VARIAX is not set
-CONFIG_SND_SOC=y
+CONFIG_SND_SOC=m
+CONFIG_SND_SOC_HISI=m
+CONFIG_SND_SOC_HISI_I2S=m
+CONFIG_SND_SOC_HISI_SPDIF=m
+CONFIG_SND_SOC_HISI_HDMI=m
+CONFIG_SND_ALOOP=m
+
 # CONFIG_SND_ATMEL_SOC is not set
 # CONFIG_SND_DESIGNWARE_I2S is not set
 
@@ -2287,7 +2296,7 @@ CONFIG_SND_SOC_I2C_AND_SPI=y
 # CONFIG_SND_SOC_WM8962 is not set
 # CONFIG_SND_SOC_WM8978 is not set
 # CONFIG_SND_SOC_TPA6130A2 is not set
-# CONFIG_SND_SIMPLE_CARD is not set
+CONFIG_SND_SIMPLE_CARD=y
 # CONFIG_SOUND_PRIME is not set
 
 #
